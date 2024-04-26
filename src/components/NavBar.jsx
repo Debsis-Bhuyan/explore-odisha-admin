@@ -128,17 +128,7 @@ const NavBar = () => {
           <MobileDrawer theme={theme} />
         </div>
       )}
-      <div className="hidden lg:flex gap-2 text-[20px]">
-        <Link to="/" className=" text-red-600">
-          <FaYoutube />
-        </Link>
-        <Link to="/" className=" text-blue-600">
-          <FaFacebook />
-        </Link>
-        <Link to="/" className=" text-rose-600">
-          <FaInstagram />
-        </Link>
-      </div>
+      
       <Logo type="signin" />
       <div className="flex gap-14  items-center">
         <div className="flex gap-2 items-center">

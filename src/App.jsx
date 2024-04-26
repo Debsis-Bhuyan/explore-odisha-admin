@@ -8,6 +8,8 @@ import Analytics from "./pages/Analytics";
 import Followers from "./pages/Followers";
 import Content from "./pages/Content";
 import WritePost from "./pages/WritePost";
+import ContactForm from "./pages/ContactForm";
+
 import { useStore } from "./store";
 
 const Layout = () => {
@@ -41,6 +43,7 @@ function App() {
           <Route path="/analytics" element={<Analytics />} />
           <Route path="/followers" element={<Followers />} />
           <Route path="/contents" element={<Content />} />
+          <Route path="/feedback" element={<ContactForm />} />
           <Route path="/write/:postId?" element={<WritePost />} />
         </Route>
         <Route path="/auth" element={<StartPage />} />

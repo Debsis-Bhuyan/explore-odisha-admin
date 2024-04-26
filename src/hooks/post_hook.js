@@ -150,3 +150,28 @@ export const useDeleteComment = (token) => {
     },
   });
 };
+export const useContact = (toast, toggle, token) => {
+  return useMutation({
+    mutationFn: async () => {
+      toggle();
+      const { data } =await axios.get(`${API_URL}/contacts/contact-data`,
+       
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      );
+      return data;
+    },
+    onError: (error, data) => {
+      toggle();
+      const errMsg = error?.response?.data?.message;
+      toast.error(errMsg ?? error.message);
+    },
+    onSuccess: (data) => {
+      toggle();
+      toast.success(data?.message);
+    },
+  });
+};

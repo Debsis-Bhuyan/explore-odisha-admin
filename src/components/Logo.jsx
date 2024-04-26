@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const Logo = ({ type }) => {
   return (
-    <div className="">
+    <div className="px-4 md:px-6">
       <Link
         to="/"
         className={`text-2xl text-orange-600  font-semibold ${

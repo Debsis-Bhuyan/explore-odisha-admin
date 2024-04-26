@@ -4,6 +4,7 @@ import {
   IconGauge,
   IconCalendarStats,
   IconSettings,
+  IconAddressBook
 } from "@tabler/icons-react";
 import {
   ActionIcon,
@@ -28,7 +29,7 @@ const mockdata = [
   { icon: IconUser, label: "Followers", to: "followers" },
   { icon: BsPencilSquare, label: "Create Post", to: "write" },
 
-  { icon: IconSettings, label: "Settings" },
+  { icon: IconAddressBook, label: "Feedback",to:"feedback"  },
 ];
 const NavbarLink = ({ icon: Icon, label, active, onClick }) => {
   return (
@@ -68,7 +69,7 @@ const SideBar = ({ close = () => {} }) => {
   ));
   return (
     <>
-      <nav className=" h-full flex flex-col gap-5 border-t border-slate-700 px-6 2xl:px-14">
+      <nav className=" h-full flex flex-col gap-5 py-4 mx-4 border-t border-slate-700 px-6 2xl:px-14">
         <p className="py-2">Menu</p>
 
         <Stack justify="center" gap={10}>
