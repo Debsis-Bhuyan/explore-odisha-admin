@@ -31,7 +31,7 @@ const WritePost = () => {
   const { user } = useStore();
   const [visible, { toggle }] = useDisclosure(false);
   const { isPending, mutate } = useCreatePost(toast, toggle, user?.token);
-  const [category, setCategory] = useState("NEWS");
+  const [category, setCategory] = useState(null);
   const [file, setFile] = useState("");
   const [mapLink, setMapLink] = useState("");
 
@@ -96,22 +96,11 @@ const WritePost = () => {
             label="Category"
             defaultValue={"Temples"}
             placeholder="Pick Category"
-            data={[
-              "Temples",
-              "Monuments",
-              "Lakes",
-              "Waterfalls",
-              "Ecotourism",
-              "Wildlife",
-              "Beaches",
-              "Cultural",
-              "Food",
-              "Festival",
-              "Arts",
-              "crafts",
-            ]}
+            data={["TEMPLES", "LAKES", "WATERFALLS", "WILDLIFE", "BEACHES"]}
             onChange={(val) => setCategory(val)}
           />
+         
+          
           <label
             className="flex items-center gap-1 justify-center text-base cursor-pointer "
             htmlFor="imgUpload"
@@ -165,14 +154,7 @@ const WritePost = () => {
           </label>
         </div> */}
         <div className="w-full flex flex-col md:flex-row flex-wrap gap-5 mb-8">
-          <TextInput
-            withAsterisk
-            label="Video Link"
-            className="w-full flex-1"
-            placeholder="provide a video link"
-            defaultValue={video}
-            onChange={(e) => setVideo(e.target.value)}
-          />
+          
 
           <TextInput
             withAsterisk

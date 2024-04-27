@@ -76,7 +76,7 @@ const UserMenu = ({ user, theme }) => {
           />
           <div className=" flex flex-col items-start ml-1">
             <p className="font-medium ">{user?.name}</p>
-            <span className="text-sm font-normal">{user?.accountType}</span>
+          
           </div>
         </Button>
       </Menu.Target>
