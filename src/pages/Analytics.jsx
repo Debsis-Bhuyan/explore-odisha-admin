@@ -31,7 +31,7 @@ const Analytics = () => {
           Analytics
         </p>
         <Select
-          label ="Search"
+          label="Search"
           defaultValue="28 days"
           placeholder="Range"
           data={["7 days", "28 days", "90 days", "365 days"]}
@@ -50,10 +50,8 @@ const Analytics = () => {
         <p className="py-5 text-base font-medium">
           Followers Stats for last {numOfDays} days
         </p>
-        <Graph dt={data?.followersStats
-} />
+        <Graph dt={data?.followersStats} />
       </div>
-      
 
       <Loading visible={isPending} />
       <Toaster richColors />

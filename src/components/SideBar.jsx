@@ -22,11 +22,11 @@ import clsx from "clsx";
 const mockdata = [
   { icon: IconGauge, label: "Dashboard", to: "dashboard" },
 
-  { icon: IconDeviceDesktopAnalytics, label: "Analytics", to: "analytics" },
+  // { icon: IconDeviceDesktopAnalytics, label: "Analytics", to: "analytics" },
 
   { icon: IconCalendarStats, label: "Content", to: "contents" },
 
-  { icon: IconUser, label: "Followers", to: "followers" },
+  // { icon: IconUser, label: "Followers", to: "followers" },
   { icon: BsPencilSquare, label: "Create Post", to: "write" },
 
   { icon: IconAddressBook, label: "Feedback",to:"feedback"  },
@@ -69,8 +69,8 @@ const SideBar = ({ close = () => {} }) => {
   ));
   return (
     <>
-      <nav className=" h-full flex flex-col gap-5 py-4 mx-4 border-t border-slate-700 px-6 2xl:px-14">
-        <p className="py-2">Menu</p>
+      <nav className=" h-full flex flex-col gap-5 py-6 mx-4 border-slate-700 px-6 2xl:px-14">
+        <p className="pt-6 pl-6">Menu</p>
 
         <Stack justify="center" gap={10}>
           {links}

@@ -8,11 +8,12 @@ import {
   YAxis,
 } from "recharts";
 const Graph = ({ dt }) => {
+
   return (
     <ResponsiveContainer width="100%" height="100%">
       {dt?.length > 0 ? (
         <AreaChart data={dt}>
-          <XAxis dataKey="_id" />
+          <XAxis dataKey={dt._id} />
           <YAxis />
           <Tooltip />
           <Area type="monotone" dataKey="uv" 

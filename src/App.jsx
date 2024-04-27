@@ -40,8 +40,8 @@ function App() {
         <Route element={<Layout />}>
           <Route index path="/" element={<Navigate to={"/dashboard"} />} />
           <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/analytics" element={<Analytics />} />
-          <Route path="/followers" element={<Followers />} />
+          {/* <Route path="/analytics" element={<Analytics />} /> */}
+          {/* <Route path="/followers" element={<Followers />} /> */}
           <Route path="/contents" element={<Content />} />
           <Route path="/feedback" element={<ContactForm />} />
           <Route path="/write/:postId?" element={<WritePost />} />

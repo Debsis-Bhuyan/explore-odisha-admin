@@ -31,19 +31,14 @@ const Stats = ({ dt }) => {
       value: formatNumber(dt?.totalViews ?? 0),
       diff: 18,
     },
-    {
-      title: "TOTAL WRITERS",
-      icon: "user",
-      value: formatNumber(dt?.totalWriters ?? 0),
-      diff: -30,
-    },
+    
   ];
   const stats = data?.map((stat) => {
     const Icon = icons[stat.icon];
     const DiffIcon = stat.diff > 0 ? IconArrowUpRight : IconArrowDownRight;
     return (
       <Paper withBorder p="md" key={stat.title}>
-        <Group justify="'space-between">
+        <Group justify="space-between">
          
           <Icon size ="1.4rem" stroke = {1.5}/>
           <Text className="`capitalize text-sm">{stat.title}</Text>
@@ -61,7 +56,7 @@ const Stats = ({ dt }) => {
       </Paper>
     );
   });
-  return <SimpleGrid cols={{ base: 1, xs: 2, md: 4 }}>{stats}</SimpleGrid>;
+  return <SimpleGrid cols={{ base: 1, xs: 2, md: 3 }}>{stats}</SimpleGrid>;
 };
 
 export default Stats;
